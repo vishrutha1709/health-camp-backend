@@ -11,7 +11,7 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
-    CORS(app)
+    CORS(app, origins=["*"])
 
     app.url_map.strict_slashes = False  # ← fixes ALL trailing slash 404s globally
 
